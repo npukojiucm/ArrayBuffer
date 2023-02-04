@@ -1,4 +1,4 @@
-function getBuffer() {
+export function getBuffer() {
   const data = '{"data":{"user":{"id":1,"name":"Hitman","level":10}}}';
   return (input => {
     const buffer = new ArrayBuffer(data.length * 2);
@@ -10,7 +10,7 @@ function getBuffer() {
   })(data);
 }
 
-class ArrayBufferConverter {
+export default class ArrayBufferConverter {
   constructor() {
     this.bufferView = null;
   }
